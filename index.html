@@ -15,61 +15,41 @@
       padding: 0;
       height: 100%;
       font-family: 'Inter', sans-serif;
-      background-color: #000;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
       overflow: hidden;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-    .stars, .twinkling, .clouds {
+    body::before {
+      content: "";
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-    }
-
-    .stars {
-      background: #000 url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/starfield.png') repeat top center;
-      z-index: -3;
-    }
-
-    .twinkling {
-      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat top center;
-      animation: moveStars 200s linear infinite;
-      z-index: -2;
-    }
-
-    .shooting-star {
-      position: absolute;
-      width: 2px;
-      height: 100px;
-      background: linear-gradient(180deg, white, transparent);
-      opacity: 0;
-      animation: shooting 5s infinite ease-in-out;
-    }
-
-    @keyframes moveStars {
-      0% { background-position: 0 0; }
-      100% { background-position: -10000px 5000px; }
-    }
-
-    @keyframes shooting {
-      0% { transform: translate(0, 0) rotate(45deg); opacity: 0; }
-      10% { opacity: 1; }
-      100% { transform: translate(100vw, 100vh) rotate(45deg); opacity: 0; }
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://raw.githubusercontent.com/KamilAhsan/starfield/master/starfield.gif') center/cover no-repeat;
+      opacity: 0.12;
+      z-index: 0;
+      pointer-events: none;
     }
 
     h1 {
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
       letter-spacing: 1px;
-      color: #ffffff;
+      z-index: 1;
     }
 
     p.subtitle {
       font-size: 1.2rem;
       color: #bbbbbb;
       margin-bottom: 3rem;
+      z-index: 1;
     }
 
     .launching {
@@ -77,12 +57,14 @@
       font-weight: 500;
       color: #50fa7b;
       animation: pulse 2s infinite;
+      z-index: 1;
     }
 
     .contact {
       margin-top: 2rem;
       font-size: 1rem;
       color: #999;
+      z-index: 1;
     }
 
     .contact a {
@@ -105,14 +87,11 @@
       bottom: 20px;
       font-size: 0.85rem;
       color: #555;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="twinkling"></div>
-  <div class="shooting-star"></div>
-
   <main>
     <h1>StatGazer</h1>
     <p class="subtitle">Precision. Focus. One Insight a Day.</p>
