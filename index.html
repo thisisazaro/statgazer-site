@@ -10,38 +10,35 @@
   <meta property="og:title" content="StatGazer">
   <meta property="og:description" content="Precision. Focus. One Insight a Day.">
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
       font-family: 'Inter', sans-serif;
-    }
-
-    .bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    body {
-      color: #ffffff;
+      background: radial-gradient(#ffffff 1px, transparent 1px),
+                  radial-gradient(#ffffff 1px, transparent 1px);
+      background-position: 0 0, 25px 25px;
+      background-size: 50px 50px;
+      background-color: #000000;
+      animation: starsMove 60s linear infinite;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: #000;
+      overflow: hidden;
+    }
+
+    @keyframes starsMove {
+      0% { background-position: 0 0, 25px 25px; }
+      100% { background-position: 1000px 1000px, 1025px 1025px; }
     }
 
     h1 {
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
       letter-spacing: 1px;
+      color: #ffffff;
     }
 
     p.subtitle {
@@ -87,20 +84,14 @@
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="https://cdn.coverr.co/videos/coverr-star-night-sky-1883/1080p.mp4" type="video/mp4">
-  </video>
-
   <main>
     <h1>StatGazer</h1>
     <p class="subtitle">Precision. Focus. One Insight a Day.</p>
     <div class="launching">Private Beta Coming Soon</div>
     <div class="contact">Contact us: <a href="mailto:hello@statgazer.com">hello@statgazer.com</a></div>
   </main>
-
   <footer>
     &copy; 2025 StatGazer Technologies
   </footer>
 </body>
 </html>
-
