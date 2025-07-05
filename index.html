@@ -5,19 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StatGazer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0f0f0f">
+  <meta property="og:title" content="StatGazer">
+  <meta property="og:description" content="Precision. Focus. One Insight a Day.">
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #000000 0%, #0f0f0f 100%);
+    }
+
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    body {
       color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       text-align: center;
-      overflow: hidden;
+      background: #000;
     }
 
     h1 {
@@ -69,14 +87,20 @@
   </style>
 </head>
 <body>
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-star-night-sky-1883/1080p.mp4" type="video/mp4">
+  </video>
+
   <main>
     <h1>StatGazer</h1>
     <p class="subtitle">Precision. Focus. One Insight a Day.</p>
     <div class="launching">Private Beta Coming Soon</div>
     <div class="contact">Contact us: <a href="mailto:hello@statgazer.com">hello@statgazer.com</a></div>
   </main>
+
   <footer>
     &copy; 2025 StatGazer Technologies
   </footer>
 </body>
 </html>
+
