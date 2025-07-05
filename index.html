@@ -6,103 +6,77 @@
   <title>StatGazer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #0f0f0f;
-      color: #f2f2f2;
-      line-height: 1.6;
-      padding: 2rem;
+      background: linear-gradient(180deg, #000000 0%, #0f0f0f 100%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
     }
 
-    header {
-      text-align: center;
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #bbbbbb;
       margin-bottom: 3rem;
     }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #bbbbbb;
-      margin-top: 0.5rem;
-    }
-
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      color: #ffffff;
+    .launching {
       font-size: 1.5rem;
-      margin-bottom: 0.75rem;
+      font-weight: 500;
+      color: #50fa7b;
+      animation: pulse 2s infinite;
     }
 
-    p {
-      color: #cccccc;
+    .contact {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #999;
     }
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 4rem;
-    }
-
-    a {
+    .contact a {
       color: #50fa7b;
       text-decoration: none;
     }
 
-    a:hover {
+    .contact a:hover {
       text-decoration: underline;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.85rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>StatGazer</h1>
-    <p>One data insight a day. Personalized. Actionable.</p>
-  </header>
-
   <main>
-    <section>
-      <h2>What is StatGazer?</h2>
-      <p>StatGazer is your daily source of data-driven insights tailored specifically to you. Our system analyzes your data (securely and privately) and delivers one impactful fact or trend every day—something that matters, something you can act on.</p>
-    </section>
-
-    <section>
-      <h2>Why it matters</h2>
-      <p>Most dashboards overwhelm. StatGazer simplifies. Instead of cluttered analytics, we give you one clear, digestible fact. Backed by data. Built for focus. Designed to help you make better decisions over time.</p>
-    </section>
-
-    <section>
-      <h2>How it works</h2>
-      <p>You connect your data once. We analyze patterns, surface signals, and push personalized facts directly to your inbox or Telegram. No spam. No noise. Just clarity.</p>
-    </section>
-
-    <section>
-      <h2>Coming soon</h2>
-      <p>The beta version of StatGazer launches soon. Want early access? <a href="mailto:hello@statgazer.com">Contact us</a>.</p>
-    </section>
+    <h1>StatGazer</h1>
+    <p class="subtitle">Precision. Focus. One Insight a Day.</p>
+    <div class="launching">Private Beta Coming Soon</div>
+    <div class="contact">Contact us: <a href="mailto:hello@statgazer.com">hello@statgazer.com</a></div>
   </main>
-
   <footer>
-    <p>&copy; 2025 StatGazer Technologies. All rights reserved.</p>
+    &copy; 2025 StatGazer Technologies
   </footer>
 </body>
 </html>
