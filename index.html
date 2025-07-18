@@ -1,82 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StatGazer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StatGazer LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #000000 0%, #0f0f0f 100%);
-      color: #ffffff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
+      justify-content: center;
       text-align: center;
-      overflow: hidden;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
-
+    img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
+      font-size: 2.5rem;
+      margin: 0;
     }
-
-    p.subtitle {
-      font-size: 1.2rem;
-      color: #bbbbbb;
-      margin-bottom: 3rem;
+    h2 {
+      font-weight: 400;
+      color: #aaa;
+      margin: 10px 0 20px;
     }
-
-    .launching {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #50fa7b;
-      animation: pulse 2s infinite;
-    }
-
-    .contact {
-      margin-top: 2rem;
+    p.description {
+      max-width: 700px;
       font-size: 1rem;
-      color: #999;
+      color: #bbb;
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
-
-    .contact a {
+    .services {
+      max-width: 700px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    .services h3 {
+      font-size: 1.3rem;
       color: #50fa7b;
+      margin-bottom: 10px;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .services li::before {
+      content: "\2022";
+      color: #50fa7b;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 12px;
+      color: #fff;
       text-decoration: none;
+      font-size: 1.5rem;
+      transition: color 0.2s;
     }
-
-    .contact a:hover {
-      text-decoration: underline;
+    .social-icons a:hover {
+      color: #50fa7b;
     }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.3; }
-      100% { opacity: 1; }
-    }
-
     footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 60px;
       font-size: 0.85rem;
-      color: #555;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>StatGazer</h1>
-    <p class="subtitle">Precision. Focus. One Insight a Day.</p>
-    <div class="launching">Private Beta Coming Soon</div>
-    <div class="contact">Contact us: <a href="mailto:hello@statgazer.com">hello@statgazer.com</a></div>
-  </main>
+  <img src="https://avatars.githubusercontent.com/u/53126816?v=4" alt="Evgenii Azarov">
+  <h1>StatGazer LLC</h1>
+  <h2>Data Science | Financial Engineering | Blockchain Solutions</h2>
+  <p class="description">
+    Based in New York, StatGazer LLC builds data-driven solutions at the intersection of finance, technology, and research. We partner with businesses, investors, and institutions to design intelligent systems and predictive models.
+  </p>
+
+  <div class="services">
+    <h3>Our Services:</h3>
+    <ul>
+      <li>Custom Financial Modeling & Forecasting</li>
+      <li>Quantitative Trading Algorithm Design</li>
+      <li>Time Series & Econometric Analysis</li>
+      <li>Machine Learning Pipelines for Risk Assessment</li>
+      <li>Blockchain App & Smart Contract Development</li>
+      <li>Tokenomics Design & Web3 Strategy</li>
+      <li>Data Engineering & Pipeline Automation</li>
+      <li>Research-as-a-Service for Investment Firms</li>
+    </ul>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://github.com/thisisazaro" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/thisisazaro/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:hello@statgazer.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+
   <footer>
-    &copy; 2025 StatGazer Technologies
+    &copy; 2025 StatGazer LLC. All rights reserved.
   </footer>
 </body>
 </html>
