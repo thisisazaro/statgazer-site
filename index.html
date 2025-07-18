@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StatGazer LLC</title>
+  <title>StatGazer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -13,10 +13,6 @@
       background-color: #111;
       color: #fff;
       font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
       min-height: 100vh;
       padding: 40px 20px;
@@ -38,28 +34,40 @@
       margin: 10px 0 20px;
     }
     p.description {
-      max-width: 700px;
+      max-width: 800px;
       font-size: 1rem;
       color: #bbb;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
     }
-    .services {
-      max-width: 700px;
-      text-align: left;
-      margin-bottom: 40px;
+    .columns {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 40px auto;
     }
-    .services h3 {
+    @media (min-width: 768px) {
+      .columns {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    .column {
+      flex: 1;
+      max-width: 300px;
+    }
+    .column h3 {
       font-size: 1.3rem;
       color: #50fa7b;
       margin-bottom: 10px;
     }
-    .services ul {
+    .column ul {
       list-style: none;
       padding: 0;
       line-height: 1.8;
+      text-align: left;
     }
-    .services li::before {
+    .column li::before {
       content: "\2022";
       color: #50fa7b;
       font-weight: bold;
@@ -68,7 +76,7 @@
       margin-left: -1em;
     }
     .social-icons {
-      margin-top: 20px;
+      margin-top: 40px;
     }
     .social-icons a {
       margin: 0 12px;
@@ -88,25 +96,46 @@
   </style>
 </head>
 <body>
-  <img src="https://avatars.githubusercontent.com/u/53126816?v=4" alt="Evgenii Azarov">
+  <img src="https://avatars.githubusercontent.com/u/53126816?v=4" alt="Evgeny Azarov">
   <h1>StatGazer LLC</h1>
-  <h2>Data Science | Financial Engineering | Blockchain Solutions</h2>
+  <h2>Founded by Evgenii Azarov — Data Scientist, Financial Engineer, and Educator</h2>
   <p class="description">
-    Based in New York, StatGazer LLC builds data-driven solutions at the intersection of finance, technology, and research. We partner with businesses, investors, and institutions to design intelligent systems and predictive models.
+    Based in New York, StatGazer LLC delivers advanced analytics, algorithmic trading, and blockchain development. We also offer tailored educational services in Data Science, Economics, and Programming.
   </p>
 
-  <div class="services">
-    <h3>Our Services:</h3>
-    <ul>
-      <li>Custom Financial Modeling & Forecasting</li>
-      <li>Quantitative Trading Algorithm Design</li>
-      <li>Time Series & Econometric Analysis</li>
-      <li>Machine Learning Pipelines for Risk Assessment</li>
-      <li>Blockchain App & Smart Contract Development</li>
-      <li>Tokenomics Design & Web3 Strategy</li>
-      <li>Data Engineering & Pipeline Automation</li>
-      <li>Research-as-a-Service for Investment Firms</li>
-    </ul>
+  <div class="columns">
+    <div class="column">
+      <h3>Education & Training</h3>
+      <ul>
+        <li>Data Science Bootcamps</li>
+        <li>Game Theory & Economics</li>
+        <li>Econometrics & Statistics</li>
+        <li>Probability Theory</li>
+        <li>Machine Learning Foundations</li>
+        <li>Programming in R / Python / SQL / Java</li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h3>Research & Modeling</h3>
+      <ul>
+        <li>Time Series & Econometric Analysis</li>
+        <li>Custom Financial Modeling & Forecasting</li>
+        <li>Risk Assessment via ML Pipelines</li>
+        <li>Quantitative Trading Algorithm Design</li>
+        <li>Research-as-a-Service for Investment Firms</li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h3>IT & Blockchain Solutions</h3>
+      <ul>
+        <li>Blockchain App & Smart Contract Dev</li>
+        <li>Tokenomics Design & Web3 Strategy</li>
+        <li>Data Pipeline Engineering</li>
+        <li>Custom AI & ML Infrastructure</li>
+      </ul>
+    </div>
   </div>
 
   <div class="social-icons">
