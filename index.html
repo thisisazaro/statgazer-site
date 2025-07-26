@@ -57,6 +57,21 @@
     .cta-button:hover {
       background-color: #40d46a;
     }
+    .button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.stripe-wrapper {
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  height: 48px;
+}
+
     .columns {
       display: flex;
       flex-direction: column;
@@ -120,18 +135,17 @@
     StatGazer LLC, headquartered in New York, delivers high-impact education and applied research in Data Science, Economics, and Programming. Our core competencies include financial engineering, advanced econometrics, and blockchain technology.
   </p>
 
+  <div class="button-group">
   <a class="cta-button" href="mailto:hello@statgazer.com">Book a Consultation</a>
 
-  <!-- Stripe Buy Button Script -->
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+  <div class="stripe-wrapper">
+    <stripe-buy-button
+      buy-button-id="buy_btn_1RowQ2Dn7wXxHh0mYvh5Skhb"
+      publishable-key="pk_live_51RouZNDn7wXxHh0mDFhXEWmxZzd61Za1myJFgPhVPD92qLQ8DznV6lep7zAHqoXMwyaSF4rF8emt3YUZbLCO2Hq000gniZH4W5">
+    </stripe-buy-button>
+  </div>
+</div>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1RowQ2Dn7wXxHh0mYvh5Skhb"
-  publishable-key="pk_live_51RouZNDn7wXxHh0mDFhXEWmxZzd61Za1myJFgPhVPD92qLQ8DznV6lep7zAHqoXMwyaSF4rF8emt3YUZbLCO2Hq000gniZH4W5"
->
-</stripe-buy-button>
 
   <div class="columns">
     <div class="column">
