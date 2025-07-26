@@ -57,20 +57,6 @@
     .cta-button:hover {
       background-color: #40d46a;
     }
-    .button-group {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 40px;
-}
-
-.stripe-wrapper {
-  display: flex;
-  align-items: center;
-  min-width: 180px;
-  height: 48px;
-}
 
     .columns {
       display: flex;
@@ -137,13 +123,6 @@
 
   <div class="button-group">
   <a class="cta-button" href="mailto:hello@statgazer.com">Book a Consultation</a>
-
-  <div class="stripe-wrapper">
-    <stripe-buy-button
-      buy-button-id="buy_btn_1RowQ2Dn7wXxHh0mYvh5Skhb"
-      publishable-key="pk_live_51RouZNDn7wXxHh0mDFhXEWmxZzd61Za1myJFgPhVPD92qLQ8DznV6lep7zAHqoXMwyaSF4rF8emt3YUZbLCO2Hq000gniZH4W5">
-    </stripe-buy-button>
-  </div>
 </div>
 
 
@@ -182,6 +161,21 @@
     </div>
   </div>
 
+
+<!-- BUY SECTION -->
+<div style="margin-top: 60px;">
+  <h3 style="color: #50fa7b;">Buy Access</h3>
+  <p style="color: #aaa; margin-bottom: 20px;">Secure instant access to premium sessions, resources, or workshops.</p>
+  
+  <div class="stripe-wrapper" style="display: flex; justify-content: center;">
+    <stripe-buy-button
+      buy-button-id="buy_btn_1RowQ2Dn7wXxHh0mYvh5Skhb"
+      publishable-key="pk_live_51RouZNDn7wXxHh0mDFhXEWmxZzd61Za1myJFgPhVPD92qLQ8DznV6lep7zAHqoXMwyaSF4rF8emt3YUZbLCO2Hq000gniZH4W5">
+    </stripe-buy-button>
+  </div>
+</div>
+
+  
   <div class="social-icons">
     <a href="https://github.com/thisisazaro" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/thisisazaro/" target="_blank"><i class="fab fa-linkedin"></i></a>
